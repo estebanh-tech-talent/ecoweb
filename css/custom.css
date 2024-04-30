@@ -1,0 +1,34 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Selectores descendientes  */
+form h1 {
+  color: hsl(231, 48%, 48%);
+}
+
+/* Child Combinator */
+form > p {
+  font-size: 36px;
+  color: #c2185b;
+}
+
+/* The Adjacent Sibling Combinator */
+
+label + input {
+  display: block;
+  clear: both;
+}
+
+* + fieldset {
+  margin: 5em 0;
+}
+
+/* 
+unidades de lonigitud relativa 
+rm
+em
+ch
+vw
+*/

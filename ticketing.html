@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <title>Comprar Tickets</title>
+  </head>
+  <body>
+    <div class="container">
+      <form method="GET" action="/procesador">
+        <h1>
+          Comprar Tickets para la Presentación de Fauna y Flora de Cundinamarca
+        </h1>
+        <p>
+          Los tickets tienen un costo de $10 cada uno. Los paquetes de cena
+          tienen un costo adicional de $5. Todos los campos son obligatorios.
+        </p>
+        <fieldset>
+          <legend>Tickets y Extras</legend>
+          <p>
+            <label for="cantidad">Cantidad de Tickets</label>
+            <span class="help">Límite 8</span>
+            <input
+              type="number"
+              value="1"
+              name="cantidad"
+              id="cantidad"
+              step="1"
+              min="1"
+              max="8"
+            />
+          </p>
+          <p>
+            <label for="paquetes_cena">Paquetes de Cena</label>
+            <span class="help">Sirve para 2 personas</span>
+            <input
+              type="number"
+              value="1"
+              name="paquetes_cena"
+              id="paquetes_cena"
+              step="1"
+              min="1"
+              max="8"
+            />
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Pago</legend>
+          <p>
+            <label for="numero_tarjeta">Número de Tarjeta de Crédito</label>
+            <span class="help">Sin espacios ni guiones, por favor.</span>
+            <input
+              type="text"
+              id="numero_tarjeta"
+              name="numero_tarjeta"
+              placeholder="372000000000008"
+              maxlength="16"
+              size="16"
+            />
+          </p>
+          <p>
+            <label for="vencimiento">Fecha de Vencimiento</label>
+            <span class="help"
+              ><abbr title="Mes en formato de dos dígitos">MM</abbr>/<abbr
+                title="Año en formato de cuatro dígitos"
+                >AAAA</abbr
+              >
+            </span>
+            <input
+              type="text"
+              id="vencimiento"
+              name="vencimiento"
+              placeholder="01/2022"
+              maxlength="7"
+              size="7"
+            />
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Dirección de Facturación</legend>
+          <p>
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="ej: Juan Pérez"
+              size="40"
+            />
+          </p>
+          <p>
+            <label for="direccion">Dirección</label>
+            <input
+              type="text"
+              id="direccion"
+              name="direccion"
+              placeholder="ej: Calle 123, Apartamento 23"
+              size="40"
+            />
+          </p>
+          <p>
+            <label for="ciudad">Ciudad</label>
+            <input
+              type="text"
+              id="ciudad"
+              name="ciudad"
+              placeholder="ej: Bogotá"
+            />
+          </p>
+          <p>
+            <label for="departamento">Departamento</label>
+            <input
+              type="text"
+              id="departamento"
+              name="departamento"
+              placeholder="ej: Cundinamarca"
+              pattern="[A-W]{2}"
+            />
+          </p>
+          <p>
+            <label for="codigo_postal">Código Postal</label>
+            <input
+              type="text"
+              id="codigo_postal"
+              name="codigo_postal"
+              placeholder="ej: 12345"
+              maxlength="5"
+              pattern="[0-9]{5}"
+              size="5"
+            />
+          </p>
+        </fieldset>
+        <button type="submit">¡Comprar Tickets!</button>
+      </form>
+    </div>
+  </body>
+</html>
